@@ -2,8 +2,24 @@ const fruits = [
     "fresa", "pera", "granada", "uva", "fresa", "frambuesa", "kiwi", "frambuesa", "frambuesa", "uva", "manzana", "fresa", "fresa", "mandarina", "pera", "uva", "pera", "fresa", "manzana", "platano", "manzana", "arandano", "durazno", "lima", "frambuesa", "uva", "frambuesa", "frambuesa", "arandano", "lima", "naranja", "pera", "fresa", "fresa", "naranja", "fresa", "uva", "naranja", "manzana", "frambuesa", "fresa", "manzana", "kiwi", "mandarina", "platano", "durazno", "frambuesa", "arandano", "platano", "durazno", "naranja", "pera", "lima", "fresa", "naranja", "fresa", "pera", "granada", "fresa", "frambuesa", "platano", "frambuesa", "frambuesa", "frambuesa", "frambuesa", "papaya", "platano", "fresa", "fresa", "lima", "melon", "papaya", "melon", "mango", "fresa", "cereza", "lima", "platano", "pera", "arandano", "mandarina", "papaya", "mandarina", "naranja", "kiwi", "melon", "manzana", "melon", "naranja", "manzana", "platano", "cereza", "naranja", "frambuesa", "cereza", "kiwi", "kiwi", "durazno", "pera", "pera", "coco", "manzana", "mandarina", "mandarina", "granada", "mandarina", "arandano", "platano", "sandia", "arandano", "uva", "pera", "mango", "manzana", "arandano", "cereza", "arandano", "platano", "platano", "manzana", "uva", "mango", "uva", "uva", "uva", "papaya", "frambuesa", "arandano", "pera", "lima", "frambuesa", "durazno", "melon", "uva", "lima", "mandarina", "kiwi", "mandarina", "cereza", "uva", "mandarina", "cereza", "lima", "cereza", "frambuesa", "frambuesa", "arandano", "lima", "lima", "arandano", "kiwi", "kiwi", "mango", "arandano", "cereza", "mango", "mango", "arandano", "mandarina", "uva", "mandarina", "arandano", "coco", "cereza", "uva", "mandarina", "lima", "mandarina", "uva", "mandarina", "uva", "uva", "sandia", "lima", "lima", "kiwi", "piña", "mandarina", "piña", "mango", "sandia", "cereza", "cereza", "uva", "uva", "cereza", "uva", "melon"
 ]
 
-// Frutas con ciclo "For" con objeto
-console.log('FRUTAS CON CICLO "FOR" CON OBJETO')
+// Frutas con ciclo "For" con objeto.
+// Segunda solución. Menos código
+console.log('FRUTAS CON CICLO "FOR" CON OBJETO. SEGUNDO SOLUCIÓN. MENOS CÓDIGO')
+const fruitsobject2 = {}
+//Comenzar con objeto vacío
+for (let i = 0; i < fruits.length; i++) {
+    const fruit = fruits[i]
+    // Se crea una variable de fruta individual, que con cada iteración toma el valor de la fruta de esa iteración
+    fruitsobject2[fruit] = (fruitsobject2[fruit] || 0) + 1;
+    // fruitsobject2[fruit] será la propiedad en el objeto con el nombre de la fruta actual de esa iteración
+    // (fruitsobject2[fruit] || 0) + 1 valida si ya existe la propiedad. Si ya existe usa su valor actual. Si no, usa cero, más 1
+}
+console.log(`Tienes un total de ${fruits.length} frutas.`)
+console.log(fruitsobject2)
+
+// Frutas con ciclo "For" con objeto.
+// Primer solución. Más código
+console.log('FRUTAS CON CICLO "FOR" CON OBJETO. PRIMER SOLUCIÓN. MÁS CÓDIGO')
 const fruitsobject = {
     manzana: 0,
     platano: 0,
@@ -92,7 +108,8 @@ console.log(`Tienes un total de ${fruits.length} frutas.`)
 console.log(fruitsobject)
 
 // Frutas con ciclo "For" sin objeto
-console.log('FRUTAS CON CICLO "FOR" SIN OBJETO')
+// Primer solución. Más código
+console.log('FRUTAS CON CICLO "FOR" SIN OBJETO. PRIMER SOLUCIÓN. MÁS CÓDIGO')
 let manzanatotal = 0;
 let platanototal = 0;
 let fresatotal = 0;

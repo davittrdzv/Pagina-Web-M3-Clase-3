@@ -2,8 +2,26 @@ const whileFruits = [
     "fresa", "pera", "granada", "uva", "fresa", "frambuesa", "kiwi", "frambuesa", "frambuesa", "uva", "manzana", "fresa", "fresa", "mandarina", "pera", "uva", "pera", "fresa", "manzana", "platano", "manzana", "arandano", "durazno", "lima", "frambuesa", "uva", "frambuesa", "frambuesa", "arandano", "lima", "naranja", "pera", "fresa", "fresa", "naranja", "fresa", "uva", "naranja", "manzana", "frambuesa", "fresa", "manzana", "kiwi", "mandarina", "platano", "durazno", "frambuesa", "arandano", "platano", "durazno", "naranja", "pera", "lima", "fresa", "naranja", "fresa", "pera", "granada", "fresa", "frambuesa", "platano", "frambuesa", "frambuesa", "frambuesa", "frambuesa", "papaya", "platano", "fresa", "fresa", "lima", "melon", "papaya", "melon", "mango", "fresa", "cereza", "lima", "platano", "pera", "arandano", "mandarina", "papaya", "mandarina", "naranja", "kiwi", "melon", "manzana", "melon", "naranja", "manzana", "platano", "cereza", "naranja", "frambuesa", "cereza", "kiwi", "kiwi", "durazno", "pera", "pera", "coco", "manzana", "mandarina", "mandarina", "granada", "mandarina", "arandano", "platano", "sandia", "arandano", "uva", "pera", "mango", "manzana", "arandano", "cereza", "arandano", "platano", "platano", "manzana", "uva", "mango", "uva", "uva", "uva", "papaya", "frambuesa", "arandano", "pera", "lima", "frambuesa", "durazno", "melon", "uva", "lima", "mandarina", "kiwi", "mandarina", "cereza", "uva", "mandarina", "cereza", "lima", "cereza", "frambuesa", "frambuesa", "arandano", "lima", "lima", "arandano", "kiwi", "kiwi", "mango", "arandano", "cereza", "mango", "mango", "arandano", "mandarina", "uva", "mandarina", "arandano", "coco", "cereza", "uva", "mandarina", "lima", "mandarina", "uva", "mandarina", "uva", "uva", "sandia", "lima", "lima", "kiwi", "piña", "mandarina", "piña", "mango", "sandia", "cereza", "cereza", "uva", "uva", "cereza", "uva", "melon"
 ]
 
+// Frutas con ciclo "While" con objeto.
+// Segunda solución. Menos código
+console.log('FRUTAS CON CICLO "WHILE" CON OBJETO. SEGUNDA SOLUCIÓN. MENOS CÓDIGO')
+const whilefruitsobject2 = {}
+//Comenzar con objeto vacío
+let counter3 = 0; // esta variable tiene un valor con número cero
+while (counter3 < whileFruits.length) {
+    const whileFruit = whileFruits[counter3]
+    // Se crea una variable de fruta individual, que con cada iteración toma el valor de la fruta de esa iteración
+    whilefruitsobject2[whileFruit] = (whilefruitsobject2[whileFruit] || 0) + 1;
+    // fruitsobject2[fruit] será la propiedad en el objeto con el nombre de la fruta actual de esa iteración
+    // (fruitsobject2[fruit] || 0) + 1 valida si ya existe la propiedad. Si ya existe usa su valor actual. Si no, usa cero, más 1
+    counter3++;    
+}
+console.log(`Tienes un total de ${whileFruits.length} frutas.`)
+console.log(whilefruitsobject2)
+
 // Frutas con ciclo "While" con objeto
-console.log('FRUTAS CON CICLO "WHILE" CON OBJETO')
+// Primer solución. Más código
+console.log('FRUTAS CON CICLO "WHILE" CON OBJETO. PRIMER SOLUCIÓN. MÁS CÓDIGO')
 const whilefruitsobject = {
     manzana: 0,
     platano: 0,
@@ -94,7 +112,8 @@ console.log(`Tienes un total de ${whileFruits.length} frutas.`)
 console.log(whilefruitsobject)
 
 // Frutas con ciclo "While" sin objeto
-console.log('FRUTAS CON CICLO "WHILE" SIN OBJETO')
+// Primer solución. Más código
+console.log('FRUTAS CON CICLO "WHILE" SIN OBJETO. PRIMER SOLUCIÓN. MÁS CÓDIGO')
 let wmanzanatotal = 0;
 let wplatanototal = 0;
 let wfresatotal = 0;
